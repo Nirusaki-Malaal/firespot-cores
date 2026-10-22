@@ -1,0 +1,11 @@
+FireSpot
+
+This project derives from shubhfront/firespot, originally distributed under the Apache License 2.0.
+Upstream source baseline: e3858c819b4c2b4f3cb810acf5cc6179530efdfe.
+Upstream repository: https://github.com/shubhfront/firespot
+The original Apache-2.0 license is preserved in LICENSES/Apache-2.0.txt.
+
+FireSpot project changes are distributed under GPL-3.0-or-later; see LICENSE.
+This notice does not relicense third-party components. Their copyright and license notices remain in force.
+Downloaded emulator cores retain the licenses recorded in the signed catalog and distributed with their matching source in Nirusaki-Malaal/firespot-cores.
+Libretro's API header retains its own permissive notice. Original FireSpot starter/homebrew games and their generator are CC0-1.0; see app/src/main/assets/starter/LICENSE.txt.

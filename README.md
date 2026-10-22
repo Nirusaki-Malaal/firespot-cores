@@ -23,6 +23,8 @@ Orbit Collector, Pocket Courier and Signal Runner are small original FireSpot ch
 
 ## Source and licenses
 
-Each core's exact source archive and license are assets in the same release as the binaries. The catalog records its upstream URL and pinned commit. Gambatte and FCEUmm retain their GPL terms; mGBA retains MPL-2.0; PCSX ReARMed retains its own GPL and component notices. See the shipped LICENSE files and source trees for full terms. Repository build/packaging helpers retain the FireSpot frontend's Apache-2.0 notice; that does not relicense third-party binaries or the CC0 games.
+Each core's exact source archive and license are assets in the same release as the binaries. The catalog records its upstream URL and pinned commit. Gambatte and FCEUmm retain their GPL terms; mGBA retains MPL-2.0; PCSX ReARMed retains its own GPL and component notices. See the shipped LICENSE files and source trees for full terms. FireSpot repository changes and build/packaging helpers are GPL-3.0-or-later, with inherited Apache-2.0 notices retained in NOTICE and LICENSES/Apache-2.0.txt. That does not relicense third-party binaries or the CC0 games.
 
 The release also includes the FireSpot Phase 1 application/build source snapshot. Extract it, follow README.md, set Android SDK/NDK paths, then use `scripts/build_gameboy.sh` and `scripts/build_online_cores.py` to build the pinned cores. Building the standard APK does not bundle emulator cores. Its in-app preparation flow installs compatible support from this release.
+
+The current application, screenshots, documentation and signed APK releases are in [Nirusaki-Malaal/firespot](https://github.com/Nirusaki-Malaal/firespot).
