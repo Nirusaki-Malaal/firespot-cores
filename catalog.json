@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "revision": 1,
-  "release": "phase1-v1",
+  "revision": 2,
+  "release": "phase1-v2",
   "cores": [
     {
       "id": "gambatte",
@@ -12,28 +12,28 @@
       "license": "GPL-2.0",
       "sourceUrl": "https://github.com/libretro/gambatte-libretro",
       "sourceCommit": "d9d6cd06382d1ced30de34d56d3609452323dab1",
-      "sourceArchiveUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/gambatte-source.tar.gz",
-      "licenseUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/gambatte-LICENSE.txt",
+      "sourceArchiveUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/gambatte-source.tar.gz",
+      "licenseUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/gambatte-LICENSE.txt",
       "experimental": false,
       "minimumAndroidApi": 28,
       "artifacts": [
         {
           "file": "libretro_gambatte.so",
-          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/gambatte-armeabi-v7a.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/gambatte-armeabi-v7a.so",
           "sha256": "a71fdf61b5ba608af803b9b6574bd498ac4dc2aa4bed69312a87784fcda884ee",
           "bytes": 1729412,
           "abi": "armeabi-v7a"
         },
         {
           "file": "libretro_gambatte.so",
-          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/gambatte-arm64-v8a.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/gambatte-arm64-v8a.so",
           "sha256": "3ca38da83e334df493b76cf7d6e3244cd097b134381ada58b39ce7494a951d63",
           "bytes": 3323008,
           "abi": "arm64-v8a"
         },
         {
           "file": "libretro_gambatte.so",
-          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/gambatte-x86_64.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/gambatte-x86_64.so",
           "sha256": "baf9d3a7baabb4a0a2ae1aa895869d2c0ab7994723524d1666acf6d3825ed4b0",
           "bytes": 3342112,
           "abi": "x86_64"
@@ -49,28 +49,28 @@
       "license": "GPL-2.0",
       "sourceUrl": "https://github.com/libretro/libretro-fceumm",
       "sourceCommit": "ac0d00a7fc01166f84c7bac01d1084ebfd2b865e",
-      "sourceArchiveUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/fceumm-source.tar.gz",
-      "licenseUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/fceumm-LICENSE.txt",
+      "sourceArchiveUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/fceumm-source.tar.gz",
+      "licenseUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/fceumm-LICENSE.txt",
       "experimental": true,
       "minimumAndroidApi": 28,
       "artifacts": [
         {
           "file": "libretro_fceumm.so",
-          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/fceumm-armeabi-v7a.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/fceumm-armeabi-v7a.so",
           "sha256": "1de12da5cf05c0facb5f38c6e8a83a0e45fd8011e19cd2d935286d9cde5f36eb",
           "bytes": 1522156,
           "abi": "armeabi-v7a"
         },
         {
           "file": "libretro_fceumm.so",
-          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/fceumm-arm64-v8a.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/fceumm-arm64-v8a.so",
           "sha256": "5106f42370eba91ae627818372e0e054b66e57bff6d37de8d382ede3fb31434b",
           "bytes": 2878032,
           "abi": "arm64-v8a"
         },
         {
           "file": "libretro_fceumm.so",
-          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/fceumm-x86_64.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/fceumm-x86_64.so",
           "sha256": "ec2cb146c84d5825fb423cbbf7932132e710dc0a7e16801cefcb276d2ff47dce",
           "bytes": 2870400,
           "abi": "x86_64"
@@ -86,28 +86,28 @@
       "license": "MPL-2.0",
       "sourceUrl": "https://github.com/libretro/mgba",
       "sourceCommit": "7a12d6d4b9acb14c0ae62c9166b6a2f3d08007f6",
-      "sourceArchiveUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/mgba-source.tar.gz",
-      "licenseUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/mgba-LICENSE.txt",
+      "sourceArchiveUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/mgba-source.tar.gz",
+      "licenseUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/mgba-LICENSE.txt",
       "experimental": true,
       "minimumAndroidApi": 28,
       "artifacts": [
         {
           "file": "libretro_mgba.so",
-          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/mgba-armeabi-v7a.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/mgba-armeabi-v7a.so",
           "sha256": "59ac26aeaf5fe407640f9e44e8db319e4faf2d9e05a1e9fbcb11784d8e30dd59",
           "bytes": 4368904,
           "abi": "armeabi-v7a"
         },
         {
           "file": "libretro_mgba.so",
-          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/mgba-arm64-v8a.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/mgba-arm64-v8a.so",
           "sha256": "9ed4140d704aa8aa7c1edd2a6b8247d655bb8c6953e58e80bf2125edfc124ca1",
           "bytes": 6298280,
           "abi": "arm64-v8a"
         },
         {
           "file": "libretro_mgba.so",
-          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/mgba-x86_64.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/mgba-x86_64.so",
           "sha256": "120eb9e9fcf906b7dbaa6b4c16e37aafd9c2ee1e712250118d60ba5bdd964620",
           "bytes": 6136880,
           "abi": "x86_64"
@@ -123,30 +123,106 @@
       "license": "GPL-2.0-or-later",
       "sourceUrl": "https://github.com/libretro/pcsx_rearmed",
       "sourceCommit": "c8816799b50388e61cfe237fe2cdbb7d8175f20a",
-      "sourceArchiveUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/pcsx-source.tar.gz",
-      "licenseUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/pcsx-LICENSE.txt",
+      "sourceArchiveUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/pcsx-source.tar.gz",
+      "licenseUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/pcsx-LICENSE.txt",
       "experimental": true,
       "minimumAndroidApi": 28,
       "artifacts": [
         {
           "file": "libretro_pcsx_rearmed.so",
-          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/pcsx-armeabi-v7a.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/pcsx-armeabi-v7a.so",
           "sha256": "7c9d04089a4ec10054eaea011a1d5814fbdfd8e017ab752be47ea6b4479b212c",
           "bytes": 1230936,
           "abi": "armeabi-v7a"
         },
         {
           "file": "libretro_pcsx_rearmed.so",
-          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/pcsx-arm64-v8a.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/pcsx-arm64-v8a.so",
           "sha256": "dcd620a70b0a37948f6cbd22e9added82136820dae26861aa9daca31cf6e8b90",
           "bytes": 1586408,
           "abi": "arm64-v8a"
         },
         {
           "file": "libretro_pcsx_rearmed.so",
-          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/pcsx-x86_64.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/pcsx-x86_64.so",
           "sha256": "ec382938eb2427568cf452968c6eaf7f6ea203e9466c87628f0ec5ad70277c63",
           "bytes": 1941632,
+          "abi": "x86_64"
+        }
+      ]
+    },
+    {
+      "id": "bsnes2014",
+      "title": "bsnes 2014 Performance",
+      "consoleIds": [
+        "snes"
+      ],
+      "license": "GPL-3.0",
+      "sourceUrl": "https://github.com/libretro/bsnes2014",
+      "sourceCommit": "3c1394e042ee444c8248e1b9210e14ea55e836e9",
+      "sourceArchiveUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/bsnes2014-source.tar.gz",
+      "licenseUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/bsnes2014-LICENSE.txt",
+      "experimental": true,
+      "minimumAndroidApi": 28,
+      "artifacts": [
+        {
+          "file": "libretro_bsnes2014.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/bsnes2014-armeabi-v7a.so",
+          "sha256": "664bb7867c381679b258b1005b443fb740aea956e747a5fc4b52c8290ef3229d",
+          "bytes": 744096,
+          "abi": "armeabi-v7a"
+        },
+        {
+          "file": "libretro_bsnes2014.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/bsnes2014-arm64-v8a.so",
+          "sha256": "97ec4350008ab00f4630c3117badb005d87fb6ef8f2034f6bd3b6a49db975d35",
+          "bytes": 1654952,
+          "abi": "arm64-v8a"
+        },
+        {
+          "file": "libretro_bsnes2014.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/bsnes2014-x86_64.so",
+          "sha256": "74c9fda6770e6c542290273ebc09d1f45c68a2a0dde9f34e64423ee57ae678a5",
+          "bytes": 1700504,
+          "abi": "x86_64"
+        }
+      ]
+    },
+    {
+      "id": "gearsystem",
+      "title": "Gearsystem",
+      "consoleIds": [
+        "mastersystem",
+        "gamegear",
+        "sg1000"
+      ],
+      "license": "GPL-3.0",
+      "sourceUrl": "https://github.com/drhelius/Gearsystem",
+      "sourceCommit": "b1cf2c4af6fb17651f8d3a5a2e0a3ba07865be05",
+      "sourceArchiveUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/gearsystem-source.tar.gz",
+      "licenseUrl": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/gearsystem-LICENSE.txt",
+      "experimental": true,
+      "minimumAndroidApi": 28,
+      "artifacts": [
+        {
+          "file": "libretro_gearsystem.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/gearsystem-armeabi-v7a.so",
+          "sha256": "3d8071f4693cf55939c1411b2ed4fa82e5f93f366e8fa1865f9253f79a37512e",
+          "bytes": 513740,
+          "abi": "armeabi-v7a"
+        },
+        {
+          "file": "libretro_gearsystem.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/gearsystem-arm64-v8a.so",
+          "sha256": "f3cf785444ca43d272a01cd1c08d980a6341ee74fee0be1b8800528099d13199",
+          "bytes": 867752,
+          "abi": "arm64-v8a"
+        },
+        {
+          "file": "libretro_gearsystem.so",
+          "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/gearsystem-x86_64.so",
+          "sha256": "38536d6829c08a3d465235fb9868c291d0416ebbf9b113754466e02c8dd51bd2",
+          "bytes": 853944,
           "abi": "x86_64"
         }
       ]
@@ -160,9 +236,13 @@
       "description": "Collect diamond checkpoints in a small original pocket arcade game.",
       "license": "CC0-1.0",
       "author": "FireSpot",
+      "genre": "Arcade",
+      "year": 2026,
+      "players": 1,
+      "sourceUrl": "https://github.com/Nirusaki-Malaal/firespot/blob/main/scripts/generate_starter_games.py",
       "artifact": {
         "file": "orbit-collector.gb",
-        "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/orbit-collector.gb",
+        "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/orbit-collector.gb",
         "sha256": "69ffcfbd1cb6cd4dd8493c6b47b9b79b3f231e17ab912727a0e5d8c5c8e31d6d",
         "bytes": 32768
       }
@@ -174,9 +254,13 @@
       "description": "A faster checkpoint course. D-pad moves; A or B makes a tone.",
       "license": "CC0-1.0",
       "author": "FireSpot",
+      "genre": "Arcade",
+      "year": 2026,
+      "players": 1,
+      "sourceUrl": "https://github.com/Nirusaki-Malaal/firespot/blob/main/scripts/generate_starter_games.py",
       "artifact": {
         "file": "pocket-courier.gb",
-        "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/pocket-courier.gb",
+        "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/pocket-courier.gb",
         "sha256": "b386ca6ddfdbc6ab74c230cadafa8956be23c8cacbad2d06c1d13b192e0e9064",
         "bytes": 32768
       }
@@ -188,9 +272,13 @@
       "description": "A downloadable checkpoint variant with cartridge battery progress. Collect diamonds; your points survive starting a new session.",
       "license": "CC0-1.0",
       "author": "FireSpot",
+      "genre": "Arcade",
+      "year": 2026,
+      "players": 1,
+      "sourceUrl": "https://github.com/Nirusaki-Malaal/firespot/blob/main/scripts/generate_starter_games.py",
       "artifact": {
         "file": "signal-runner.gb",
-        "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1/signal-runner.gb",
+        "url": "https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v2/signal-runner.gb",
         "sha256": "b51061fc49f8a48421c06f1e3ed6c4f5f1da6a4eefad4110e9b8f0cc62466b15",
         "bytes": 32768
       }

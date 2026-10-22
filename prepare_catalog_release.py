@@ -6,15 +6,15 @@ sys.path.insert(0,str(Path(__file__).resolve().parent))
 from verify_artifacts import check_elf
 from generate_starter_games import game
 from build_online_cores import CORES,ABIS
-p=argparse.ArgumentParser();p.add_argument('--key',type=Path,required=True);p.add_argument('--out',type=Path,default=Path('artifacts/catalog-release'));a=p.parse_args();a.out.mkdir(parents=True,exist_ok=True)
-base='https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/phase1-v1'
+p=argparse.ArgumentParser();p.add_argument('--release',default='phase1-v2');p.add_argument('--revision',type=int,default=2);p.add_argument('--key',type=Path,required=True);p.add_argument('--out',type=Path,default=Path('artifacts/catalog-release'));a=p.parse_args();a.out.mkdir(parents=True,exist_ok=True)
+base=f'https://github.com/Nirusaki-Malaal/firespot-cores/releases/download/{a.release}'
 def artifact(path,name,abi=None):
  shutil.copy2(path,a.out/name)
  item={'file':path.name,'url':f'{base}/{name}','sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'bytes':path.stat().st_size}
  if abi:item['abi']=abi;check_elf(path.read_bytes(),abi)
  return item
 cores=[]
-for id,title,consoles,license in [('gambatte','Gambatte',['gameboy'],'GPL-2.0'),('fceumm','FCEUmm',['nes'],'GPL-2.0'),('mgba','mGBA',['gba'],'MPL-2.0'),('pcsx','PCSX ReARMed',['ps1'],'GPL-2.0-or-later')]:
+for id,title,consoles,license in [('gambatte','Gambatte',['gameboy'],'GPL-2.0'),('fceumm','FCEUmm',['nes'],'GPL-2.0'),('mgba','mGBA',['gba'],'MPL-2.0'),('pcsx','PCSX ReARMed',['ps1'],'GPL-2.0-or-later'),('bsnes2014','bsnes 2014 Performance',['snes'],'GPL-3.0'),('gearsystem','Gearsystem',['mastersystem','gamegear','sg1000'],'GPL-3.0')]:
  if id=='gambatte':
   folder=Path('artifacts/gameboy');file='libretro_gambatte.so';url='https://github.com/libretro/gambatte-libretro';pin='d9d6cd06382d1ced30de34d56d3609452323dab1';source=folder/'gambatte-source.tar.gz';notice=folder/'COPYING'
  else:
@@ -28,12 +28,12 @@ for id,title,source,description in [
  ('orbit-collector','Orbit Collector',Path('app/src/main/assets/starter/orbit-collector.gb'),'Collect diamond checkpoints in a small original pocket arcade game.'),
  ('pocket-courier','Pocket Courier',Path('app/src/main/assets/starter/pocket-courier.gb'),'A faster checkpoint course. D-pad moves; A or B makes a tone.'),
  ('signal-runner','Signal Runner',new,'A downloadable checkpoint variant with cartridge battery progress. Collect diamonds; your points survive starting a new session.')]:
- games.append({'id':id,'title':title,'consoleId':'gameboy','description':description,'license':'CC0-1.0','author':'FireSpot','artifact':artifact(source,source.name)})
+ games.append({'id':id,'title':title,'consoleId':'gameboy','description':description,'license':'CC0-1.0','author':'FireSpot','genre':'Arcade','year':2026,'players':1,'sourceUrl':'https://github.com/Nirusaki-Malaal/firespot/blob/main/scripts/generate_starter_games.py','artifact':artifact(source,source.name)})
 shutil.copy2('app/src/main/assets/starter/LICENSE.txt',a.out/'games-LICENSE.txt')
 shutil.copy2('scripts/generate_starter_games.py',a.out/'generate_starter_games.py')
 shutil.copy2('scripts/build_online_cores.py',a.out/'build_online_cores.py')
 shutil.copy2('scripts/build_gameboy.sh',a.out/'build_gameboy.sh')
-catalog={'schema':1,'revision':1,'release':'phase1-v1','cores':cores,'games':games}
+catalog={'schema':1,'revision':a.revision,'release':a.release,'cores':cores,'games':games}
 manifest=a.out/'catalog.json';manifest.write_text(json.dumps(catalog,indent=2)+'\n')
 subprocess.run(['openssl','dgst','-sha256','-sign',str(a.key),'-out',str(a.out/'catalog.sig'),str(manifest)],check=True)
 for name in ['catalog.json','catalog.sig']:shutil.copy2(a.out/name,Path('app/src/main/assets/catalog')/name)

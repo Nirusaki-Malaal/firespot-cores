@@ -5,19 +5,22 @@ from pathlib import Path
 CORES={
  'fceumm':('https://github.com/libretro/libretro-fceumm','ac0d00a7fc01166f84c7bac01d1084ebfd2b865e','Copying','libretro_fceumm.so'),
  'mgba':('https://github.com/libretro/mgba','7a12d6d4b9acb14c0ae62c9166b6a2f3d08007f6','LICENSE','libretro_mgba.so'),
+ 'bsnes2014':('https://github.com/libretro/bsnes2014','3c1394e042ee444c8248e1b9210e14ea55e836e9','COPYING','libretro_bsnes2014.so'),
+ 'gearsystem':('https://github.com/drhelius/Gearsystem','b1cf2c4af6fb17651f8d3a5a2e0a3ba07865be05','LICENSE','libretro_gearsystem.so'),
  'pcsx':('https://github.com/libretro/pcsx_rearmed','c8816799b50388e61cfe237fe2cdbb7d8175f20a','COPYING','libretro_pcsx_rearmed.so'),
 }
 ABIS=['armeabi-v7a','arm64-v8a','x86_64']
 def run(args,**kwargs):subprocess.run(list(map(str,args)),check=True,**kwargs)
 def main():
- p=argparse.ArgumentParser();p.add_argument('--work',type=Path,default=Path('.tooling/online-cores'));p.add_argument('--out',type=Path,default=Path('artifacts/online-cores'));p.add_argument('--package-only',action='store_true',help='Package already-built output in the work directory');a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--work',type=Path,default=Path('.tooling/online-cores'));p.add_argument('--out',type=Path,default=Path('artifacts/online-cores'));p.add_argument('--only',nargs='+',choices=list(CORES));p.add_argument('--package-only',action='store_true',help='Package already-built output in the work directory');a=p.parse_args()
  ndk=Path(os.environ.get('ANDROID_NDK_HOME','/missing-ndk'));a.work.mkdir(parents=True,exist_ok=True);a.out.mkdir(parents=True,exist_ok=True)
- for name,(url,pin,license,file) in CORES.items():
+ for name in a.only or CORES:
+  url,pin,license,file=CORES[name]
   src=a.work/name
   if not a.package_only:
    if not (src/'.git').exists():run(['git','clone','--no-checkout',url,src])
    run(['git','-C',src,'fetch','--depth','1','origin',pin]);run(['git','-C',src,'checkout','--detach',pin])
-   if name!='mgba':run([ndk/'ndk-build','-C',src/'jni','APP_ABI='+' '.join(ABIS),'APP_PLATFORM=android-28',f'NDK_OUT={a.work.resolve()}/{name}-obj',f'NDK_LIBS_OUT={a.work.resolve()}/{name}-libs','-j2'])
+   if name!='mgba':run([ndk/'ndk-build','-C',src/({'bsnes2014':'target-libretro/jni','gearsystem':'platforms/libretro/jni'}.get(name,'jni')),'PROFILE=performance','APP_ABI='+' '.join(ABIS),'APP_PLATFORM=android-28',f'NDK_OUT={a.work.resolve()}/{name}-obj',f'NDK_LIBS_OUT={a.work.resolve()}/{name}-libs','-j2'])
    else:
     for abi in ABIS:
      build=a.work/f'mgba-build-{abi}'

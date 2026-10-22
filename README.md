@@ -2,18 +2,22 @@
 
 Versioned Android libretro core binaries for FireSpot, matching upstream source, licenses, and original redistributable games. Downloads are hosted in [GitHub Releases](https://github.com/Nirusaki-Malaal/firespot-cores/releases).
 
-## First release: phase1-v1
+## Current release: phase1-v2
 
 | Core | System | Runtime evidence |
 |---|---|---|
 | Gambatte | Game Boy / Game Boy Color | Original Game Boy games tested on a local Android emulator; Fire TV acceptance pending |
+| bsnes 2014 Performance | SNES / Super Famicom | Experimental Android build; gameplay/device tests pending |
+| Gearsystem | Master System / Game Gear / SG-1000 | Experimental Android build; gameplay/device tests pending |
 | FCEUmm | NES / Famicom | Android build; experimental until gameplay is verified |
 | mGBA | Game Boy Advance | Android build; experimental until gameplay is verified |
 | PCSX ReARMed | PlayStation | Android build; experimental until gameplay is verified |
 
-All four cores have ARMv7, ARM64 and x86_64 binaries, built with NDK 28.2.13676358 for Android API 28+. This does not imply every title runs or every Fire TV has adequate performance. PSP and hardware-rendered systems are not currently released: the FireSpot bridge needs additional rendering integration and device testing.
+All six cores have ARMv7, ARM64 and x86_64 binaries, built with NDK 28.2.13676358 for Android API 28+. This does not imply every title runs or every Fire TV has adequate performance. PSP and hardware-rendered systems are not currently released: the FireSpot bridge needs additional rendering integration and device testing.
 
 The signed catalog maps console IDs and CPU architectures to immutable release URLs, exact sizes and SHA-256 hashes. FireSpot pins the publisher public key and verifies the catalog signature before trusting entries. Each native download is verified for size, checksum and ELF architecture before installation. Failed or cancelled installs retain any previously installed version.
+
+Eighteen CPU-specific binaries are included. The earlier phase1-v1 release is retained for existing clients.
 
 `catalog.sig` is a binary RSA/SHA-256 signature over the exact bytes of `catalog.json`. The public key is in `public-key.der`; the private signing key is never published. SHA256SUMS provides independent file-integrity metadata.
 
